@@ -1,20 +1,13 @@
 public class Desktop extends TableComputer {
-    public String cpu() {
-        return "Apple A13";
+    String videokarta;
+
+    public Desktop(String cpu, String ozu, String hdd, String videokarta){
+        super(cpu, ozu, hdd);
+        this.videokarta = videokarta;
     }
 
-    public String ozu() {
-        return "4ГБ";
-    }
-
-    public String hdd() {
-        return "64ГБ";
-    }
-
-    public String videokarta() {
-        return "GEOFORCE 3060";
-    }
+    @Override
     public String toString() {
-        return cpu() + ", " + ozu() + ", " + hdd() + ", " + videokarta();}
+        return String.format("%s, %s, %s, видеокарта: %s", this.cpu, this.ozu, this.hdd, this.videokarta);}
 
 }

@@ -1,16 +1,14 @@
 public class Monoblock extends TableComputer {
-    private Monitor display;
-    public String cpu() {
-        return "M1";
-    }
-    public String ozu() {
-        return "8ГБ";
-    }
-    public String hdd() {
-        return "64ГБ";
-    }
-    public String toString() {
+    Monitor display;
+
+    public Monoblock(String cpu, String ozu, String hdd, String display) {
+        super(cpu, ozu, hdd);
         this.display = new Monitor();
-        display.setDisplay("OLED 4k");
-        return cpu() + ", " + ozu() + ", " + hdd() + ", Дисплей: " + display.getDisplay();}
+        this.display.setDisplay(display);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, %s, %s, дисплей: %s", this.cpu, this.ozu, this.hdd, this.display.getDisplay());
+    }
 }
