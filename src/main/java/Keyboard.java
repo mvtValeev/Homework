@@ -4,7 +4,7 @@ public class Keyboard {
             this.keys = keys;
     }
         public String getKeyboard(){
-            return keys;
+            return this.keys;
         }
 }
 

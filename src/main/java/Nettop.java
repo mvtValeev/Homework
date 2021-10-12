@@ -1,15 +1,5 @@
 public class Nettop extends TableComputer {
-    public String cpu() {
-        return "M1";
+    public Nettop(String cpu, String ozu, String hdd) {
+        super(cpu, ozu, hdd);
     }
-
-    public String ozu() {
-        return "8ГБ";
-    }
-
-    public String hdd() {
-        return "64ГБ";
-    }
-    public String toString() {
-        return cpu() + ", " + ozu() + ", " + hdd();}
 }

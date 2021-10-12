@@ -1,9 +1,9 @@
 public class Monitor {
-    String keys;
-    public void setDisplay(String keys){
-        this.keys = keys;
+    String display;
+    public void setDisplay(String display){
+        this.display = display;
     }
     public String getDisplay(){
-        return keys;
+        return this.display;
     }
 }
